@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import './home.css';
 import Navbar from '../../components/navbar/';
 
 export default function Home(){
   return(
-    <div>
+    <>
       <Navbar/>
-      <h1>Página inicial</h1>
-    </div>
+      <h1>{useSelector(state => state.usuarioEmail)}</h1>
+      <h1>Usuario logado? {useSelector(state => String(state.usuarioLogado))}</h1>
+    </>
   )
 }
