@@ -24,7 +24,7 @@ export default function Navbar() {
             useSelector(state => state.usuarioLogado) ?
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="">Publicar Evento</Link>
+                  <Link className="nav-link" to="cadastrarevento">Publicar Evento</Link>
                 </li>
                 <li>
                   <Link className="nav-link" to="">Meus Eventos</Link>
