@@ -88,9 +88,9 @@ export default function EventoCadastro() {
             <label htmlFor="">Upload da foto:</label>
             <input type="file" className="form-control" onChange={(e)=>setFoto(e.target.files[0])}/>
           </div>
-          <div>
+          <div class="mx-auto">
             {
-              carregando ? <div class="spinner-border mx-auto" role="status"><span class="sr-only">Loading...</span></div>
+              carregando ? <div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
               : <button className="btn btn-lg btn-block mt-3 btn-cadastro" type="button" onClick={cadastrar}>Publicar evento</button>
             }
           </div>

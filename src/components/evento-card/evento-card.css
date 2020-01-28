@@ -1,0 +1,39 @@
+.ico-eye{
+  width: 25px;
+  color: #614ea6;
+}
+.rodape-card{
+  color: #614ea6;
+  height: 35px;
+}
+.btn-detalhes{
+  background: #614ea6;
+  color: #fff;
+}
+.btn-detalhes:hover{
+  background: #f21667;
+  color: #fff;
+}
+.card-title{
+  color: #614ea6;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.card-text{
+  max-height: 100px;
+  overflow: hidden;
+  color: #666;
+}
+.container-img-card{
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border-radius: 3px;
+}
+.img-cartao{
+  min-width: 100%;
+}
