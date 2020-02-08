@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-purple">
       <Link className="navbar-brand" to="/">
-        <img src="assets/logo.svg" alt="" className="ico-logo" />
+        <img src="../assets/logo.svg" alt="" className="ico-logo" />
         <span className="txt-logo">Event's loop</span>
       </Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,22 +24,22 @@ export default function Navbar() {
             useSelector(state => state.usuarioLogado) ?
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="cadastrarevento">Publicar Evento</Link>
+                  <Link className="nav-link" to="/cadastrarevento">Publicar Evento</Link>
                 </li>
                 <li>
-                  <Link className="nav-link" to="">Meus Eventos</Link>
+                  <Link className="nav-link" to="/eventos/meus">Meus Eventos</Link>
                 </li>
                 <li>
-                  <Link className="nav-link" onClick={() => dispatch({type: 'LOG_OUT'})}>Sair</Link>
+                  <Link className="nav-link" onClick={() => dispatch({type: 'LOG_OUT'})} to="/">Sair</Link>
                 </li>
               </>
             :
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="novousuario">Cadastrar</Link>
+                  <Link className="nav-link" to="/novousuario">Cadastrar</Link>
                 </li>
                 <li>
-                  <Link className="nav-link" to="Login">Login</Link>
+                  <Link className="nav-link" to="/Login">Login</Link>
                 </li>
               </>
           }

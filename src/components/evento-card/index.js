@@ -4,7 +4,7 @@ import firebase from '../../config/firebase';
 
 import './evento-card.css';
 
-export default function EventoCard({key, img, titulo,detalhes,visualizacoes}) {
+export default function EventoCard({id, img, titulo,detalhes,visualizacoes}) {
 
   const [urlImagem, setUrlImagem] = useState();
   
@@ -14,7 +14,7 @@ export default function EventoCard({key, img, titulo,detalhes,visualizacoes}) {
       .catch((erro)=>{
         console.log(`Ocorreu um erro na importação da imagem: ${erro.message}`);
       })
-  });
+  }, [urlImagem]);
 
   return (
     <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 my-3 text-center">
@@ -24,7 +24,7 @@ export default function EventoCard({key, img, titulo,detalhes,visualizacoes}) {
         <h5 className="font-weight-bold card-title">{titulo}</h5>
         <p className="card-text text-justify">{detalhes}</p>
         <div className="rodape-card d-flex align-items-center justify-content-between">
-          <Link to="/" className="btn btn-sm btn-detalhes">+ detalhes</Link>
+          <Link to={"/eventodetalhes/" + id} className="btn btn-sm btn-detalhes">+ detalhes</Link>
           <div className="text-right ">
             <img src="../assets/eye.svg" alt="" className="ico-eye mx-2" />
             <span>{visualizacoes}</span>

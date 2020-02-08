@@ -47,12 +47,12 @@ function Login(props){
         </div>
         {msgTipo === 'sucesso' && 
         <div className="msg-login text-white text-center my-5 text-center">
-          <span><strong>WoW!!!</strong> Você está conectado &#128526;</span>
+          <span><strong>WoW!!!</strong> Você está conectado <span aria-label="">&#128526;</span></span>
         </div>
         }
         {msgTipo === 'erro' && 
         <div className="msg-login text-white text-center my-5 text-center">
-          <span><strong>Ops!!!</strong> Verifique se o Usuário/Senha estão corretos &#128549;</span>
+          <span><strong>Ops!!!</strong> Verifique se o Usuário/Senha estão corretos <span>&#128549;</span></span>
         </div>
         }
       </form>

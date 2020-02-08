@@ -63,7 +63,7 @@ export default function NovoUsuario() {
         <input onChange={(e) => setEmail(e.target.value)} type="email" id="inputEmail" className="form-control my-2" placeholder="Email" />
         <input onChange={(e) => setSenha(e.target.value)}type="password" id="inputPassword" className="form-control my-2" placeholder="Senha" />
 
-        {carregando ? <div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
+        {carregando ? <div className="spinner-border" role="status"><span className="sr-only">Loading...</span></div>
         : <button className="btn btn-lg btn-block mt-3 mb-5 btn-cadastro" type="button" onClick={cadastrar}>Cadastrar</button>}
         {msgTipo === 'sucesso' &&
           <div className="msg-login text-center my-5 text-center">
